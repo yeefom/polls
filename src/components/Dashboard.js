@@ -29,13 +29,13 @@ class Dashboard extends Component {
         <div className='dashboard-toggle'>
           <button
             style={{ textDecoration: !showAnswered ? 'underline' : null }}
-            onClick={this.showAnswered}>
+            onClick={this.showUnanswered}>
             Unanswered
           </button>
           <span>|</span>
           <button
             style={{ textDecoration: showAnswered ? 'underline' : null }}
-            onClick={this.showUnanswered}>
+            onClick={this.showAnswered}>
             Answered
           </button>
         </div>
