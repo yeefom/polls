@@ -4,6 +4,7 @@ import { handleInitialData } from '../actions/shared'
 import Dashboard from './Dashboard'
 import Loadingbar from 'react-redux-loading'
 import Leaderboard from './Leaderboard'
+import AddPoll from './AddPoll'
 
 class App extends Component {
   componentDidMount() {
@@ -14,7 +15,7 @@ class App extends Component {
     return (
       <div>
         <Loadingbar/>
-        { this.props.loading ? null : <Leaderboard /> }
+        { this.props.loading ? null : <AddPoll /> }
       </div>
     )
   }
