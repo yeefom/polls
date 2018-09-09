@@ -1,14 +1,19 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getPercentage } from '../utils/helpers'
+import { handleAddAnswer } from '../actions/answers'
 
 const votesKeys = ['aVotes', 'bVotes', 'cVotes', 'dVotes'];
 
 class Poll extends Component {
   handleAnswer = (answer) => {
     const { poll, authedUser } = this.props
-
     this.answered = true
+    this.props.dispatch(handleAddAnswer({
+      authedUser,
+      answer,
+      id: poll.id
+    }))
   }
 
   render() {
